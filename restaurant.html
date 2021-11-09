@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <title>RESTAURANT</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap');
+
+      #banner {
+        /* 높이지정 */
+        height: 10vh;
+        background-image: url("images/bg_image.jpg");
+      }
+      #contact{
+        text-align: center;
+      }
+
+      .box {
+          width: 800px auto;
+          height: 2800px auto;
+
+          display: flex;
+          flex-direction: column;
+
+      }
+
+      .Top_list {
+        border-top:1px solid grey;
+        margin: 0 auto;
+        width: 600px;
+        height: 70px auto;
+
+      }
+
+      .title {
+        margin : 0px 0px 10px 20px;
+        font-size: 20px
+      }
+
+      .Top_list > p {
+        margin : 0px 0px 10px 20px;
+        color: gray;
+      }
+
+      .img {
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
+      @media screen and (max-width: 640px) {
+        .top_title {
+          width: 300px;
+          height: auto;
+          font-size: 1em;
+        }
+        .top_map {
+          width: 300 auto;
+          height: 500 auto;
+        }
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <header id="head">
+      <a href="index.html" style="font-weight: bolder;"><p style="display:inline">G</p>-CART</a>
+      <label for="menu_btn">
+          <div class="mBtn"><a href="javascript:;">메뉴열기</a></div>
+          <nav class="mNav">
+            <ul class="sub">
+                <div class="closeBtn"><a href="javascript:;">메뉴닫기</a></div>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="restaurant.html">RESTAURANT</a></li>
+                <li><a href="cafe.html">CAFE</a></li>
+                <li><a href="tourist_spot.html">TOURIST SPOT</a></li>
+                <li><a href="accommodation.html">ACCOMMODATION</a></li>
+            </ul>
+          </nav>
+          <div class="bg-shadow"></div>
+      </label>
+      <nav class="gnb">
+        <div class="main_menu">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="restaurant.html" style="color: #5e6cd5; font-weight: bolder;">RESTAURANT</a>
+          <a href="cafe.html">CAFE</a>
+          <a href="tourist_spot.html">TOURIST SPOT</a>
+          <a href="accommodation.html">ACCOMMODATION</a>
+        </div>
+      </nav>
+    </header>
+    <section id="banner"></section>
+    <div class="box">
+      <section id="contact">
+        <h1>< Instagram 맛집 TOP10 ></h1>
+        <br>
+            <iframe class="top_map" src="restaurant_Top10.html" width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </section>
+
+
+      <!-- 목록 -->
+      <div class="Top_list" style="border-Top:1px solid white;">
+        <p style="margin-left: 350px; margin-bottom: 2px; color: grey; font-size: 12px;">이름을 클릭하면 상세정보 페이지로 이동합니다.</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/1731787868", target="_blank">
+              1위
+              <h3 style="display:inline">상상 빅버거</h3>
+              (햄버거)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">경남 거제시 일운면 거제대로 2752</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/20633484", target="_blank">
+              2위
+              <h3 style="display:inline">서씨네삼겹살</h3>
+              (육류,고기)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">[본점] 경남 거제시 중곡로3길 33</p>
+        <p class="etc">[아주동직영점] 경남 거제시 아주1로 18</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/279346784", target="_blank">
+              3위
+              <h3 style="display:inline">배말칼국수김밥</h3>
+              (분식,국수)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">[본점] 경남 거제시 장승포로 2</p>
+        <p class="etc">[거제학동직영점] 경남 거제시 동부면 학동6길 51</p>
+        <p class="etc">[고현직영점] 경남 거제시 거제중앙로5길 26</p>
+        <p class="etc">[거제점] 경남 거제시 거제면 거제남서로 3404</p>
+        <p class="etc">[거제장목점] 경남 거제시 장목면 옥포대첩로 776-5</p>
+        <p class="etc">[거제학동점] 경남 거제시 동부면 학동6길 51</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/1233906772", target="_blank">
+              4위
+              <h3 style="display:inline">파인에이플러스</h3>
+              (양식)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">경남 거제시 둔덕면 청마로 206</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/978936548", target="_blank">
+              5위
+              <h3 style="display:inline">정일면 거제점</h3>
+              (일본식라면)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">경남 거제시 고현로 87-1</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/1248691085", target="_blank">
+              6위
+              <h3 style="display:inline">하면옥</h3>
+              (냉면)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">[본점] 경남 거제시 연초면 연하해안로 320</p>
+        <p class="etc">[장승포점] 경남 거제시 장승포로 18</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/1551959208", target="_blank">
+              7위
+              <h3 style="display:inline">하누화로</h3>
+              (육류,고기)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">경남 거제시 아주1로2길 7</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/723983752", target="_blank">
+              8위
+              <h3 style="display:inline">곳간504</h3>
+              (육류,고기)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">[본점] 경남 거제시 아주1로2길 39</p>
+        <p class="etc">[상동점] 경남 거제시 상동5길 23</p>
+      </div>
+      <div class="Top_list">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/76053934", target="_blank">
+              9위
+              <h3 style="display:inline">청춘밥상</h3>
+              (일식)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">[거제고현점]경남 거제시 거제중앙로 1904-7</p>
+        <p class="etc">[아주점]경남 거제시 아주1로2길 25</p>
+      </div>
+      <div class="Top_list" style="border-bottom:1px solid grey; margin-bottom: 50px;">
+        <strong>
+          <span class="title">
+            <a href="http://place.map.kakao.com/2120031057", target="_blank">
+              10위
+              <h3 style="display:inline">장승포차</h3>
+              (실내포장마차)
+            </a>
+          </span>
+        </strong>
+        <p class="etc">경남 거제시 장승포동 685-3</p>
+      </div>
+
+    </div>
+
+    <footer id="footer">
+      <p>E-mail. qorentks1334@naver.com</p>
+      <p>Copyright ⓒ 2021 by BAEK SEUNGHO</p>
+      <p>All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
