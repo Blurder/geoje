@@ -1,0 +1,380 @@
+@charset "utf-8";
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Gowun Dodum', sans-serif;
+	box-sizing: border-box;
+  min-width: 320px;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+
+/****** header *******/
+
+#head{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+#head > a{
+	padding: 10px 20px;
+	background-color: #fff;
+	font-size: 25px;
+  color: #1f202d;
+  font-weight: bolder;
+}
+#head > a > p{
+	color: #6798FD;
+}
+
+/** main menu display **/
+#head > .gnb > .main_menu{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	background-color: #fff;
+	display: none;
+}
+
+#head > .gnb > .main_menu a{
+	display: block;
+	padding: 10px;
+}
+#head > .gnb > .main_menu a:hover{
+	background-color: #666;
+	color: #fff;
+}
+/** mobile menu bar **/
+@media screen and (max-width: 640px) {
+	#head{
+		width:100%;
+		height: 25px;
+	}
+	#head > a{
+		display: block;
+		padding: 5px 5px;
+		font-size: 8px;
+		text-transform: uppercase;
+	}
+	.mBtn a {
+		display: block;
+		text-indent: -9999px;
+		width: 24px; height: 24px;
+		background: url('images/menu.png') no-repeat;
+		margin-top: 20px;
+
+	}
+	.mNav {
+		z-index: 2;
+		position: fixed;
+		background-color: #fff;
+		top: 0; right: -100%;
+		width: 70%; height: 100%;
+		transition: all 0.3s ease;
+	}
+	.mNav.on {
+		right: 0;
+	}
+	.bg-shadow {
+		position: fixed;
+		top: 0; right: 0;
+		width: 100%; height: 100%;
+		z-index: 1;
+		background: rgba(0, 0, 0, 0.7);
+		display: none;
+		cursor: pointer;
+	}
+
+	.sub {
+		position: relative;
+		padding-top: 30px;
+	}
+	.closeBtn {
+		position: absolute;
+		top: 0; right: 0;
+		display: block;
+	}
+	.closeBtn a {
+		display: block;
+		text-indent: -9999px;
+		width: 24px; height: 24px;
+		background: url('images/close.png') no-repeat;
+		margin-top: 25px; margin-right: 20px;
+	}
+	.sub li a {
+		display: block;
+		font-size: 1.4rem;
+		color: #333;
+		padding: 10px 20px;
+		border-bottom: 1px solid #d1d4d8;
+	}
+
+}
+
+/**** banner section ****/
+#banner{
+	height: 60vh;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(images/bg_image.jpg);
+	/* background-image: url(images/bg_image.jpg); */
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+}
+#banner > .title{
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+#banner > .title >h1{
+	color: #fff;
+	font-size: 3vw;
+	letter-spacing: 0.3em;
+  /* letter-spacing 은 오른쪽에 여백이 들어감, 균형을 맞출려면 왼쪽에 여백 추가 */
+  margin-left: 0.3em;
+}
+#banner > .title > h2{
+	color: #070a2f
+}
+#banner > p {
+	color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/***** about *****/
+#about{
+	width: 400px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+/**** portfolio ****/
+#portfolio {
+  /* 하위 모든 요소를 중앙 정렬 */
+  text-align: center;
+  margin: 30px auto;
+  padding: 30px;
+}
+#portfolio > h1{
+  color: #3d486e;
+  font-size: 3em;
+}
+#portfolio > h2{
+  color: #131a30;
+}
+#portfolio > .container > .photo {
+  width: 200px;
+  margin: 40px auto;
+}
+#portfolio > .container > .photo img {
+	margin: 30px auto;
+	display: block;
+  width: 100%;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+
+/****** contact ******/
+/* CONTACT *************************/
+#contact {
+  text-align: center;
+	margin: 30px auto;
+  padding: 30px;
+}
+#contact > h1 {
+  font-size: 2.5em;
+  color: #000000;
+}
+#contact > .text {
+  display: none;
+}
+
+#info > .title > a {
+	display: none;
+	font-size: 2em;
+
+}
+
+#contact > .sns {
+  width: 70%;
+  margin: 20px auto;
+}
+#contact > .sns > a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(190, 190, 190);
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff;
+
+  position: relative;
+  overflow: hidden;
+}
+#contact > .sns > a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: blue;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+#contact > .sns > a:hover:before {
+  height: 100%;
+}
+#contact > .sns > a .icon {
+  position: relative;
+	transition: 0.5s;
+}
+#contact > .sns > a:hover .icon{
+	transform: rotateY(360deg);
+}
+#contact > .sns > a:nth-child(1):before {
+  background-color: #3b5999;
+}
+#contact > .sns > a:nth-child(2):before {
+  background-color: #ff2495;
+}
+#contact > .sns > a:nth-child(3):before {
+  background-color: #0077b5;
+}
+
+/***** footer *****/
+#footer {
+  text-align: center;
+  /* 배경색을 지정합니다. */
+  background-color: #535353;
+  /* 글자색을 지정합니다. */
+  color: #fff;
+
+  /* 위아래 여백을 주고 가운데로 정렬합니다.*/
+  padding: 30px 0;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+}
+
+
+/****** 미디어 쿼리  **********/
+/** mobile menu bar **/
+@media screen and (max-width: 640px) {
+	#about > .container{
+		width: 300px;
+	}
+}
+
+/**** 테블릿 사이즈 ****/
+@media all and (min-width: 768px) and (max-width:1023px)
+{
+
+	#head > label {
+	display: none;
+	}
+
+  #head > .gnb > .main_menu {
+    position: static;
+    display: flex;
+  }
+  #head > .gnb > input[id=menu_btn]:checked ~ .main_menu{
+    display: flex;
+  }
+
+	#portfolio > .container > div:nth-of-type(3) {
+    display: block;
+  }
+	#portfolio > .container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+	#portfolio > .container > .photo {
+    width: 40%;
+  }
+  #contact > .text {
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+  }
+  #contact > .text > p {
+    margin-top: 5px;
+  }
+}
+
+/**** PC 사이즈 ****/
+@media all and (min-width: 1024px){
+  #head{
+    width: 100%;
+  }
+	#head > label {
+		display: none;
+	}
+
+  #head > .gnb > .main_menu {
+    display: flex;
+    position: static;
+  }
+
+	#about {
+    width: 90%;
+    margin-top: 30px auto;
+    overflow: auto;
+  }
+  #about > .container {
+    position: static;
+    margin-right: : 0 ;
+  }
+
+  #about > .tab_btn {
+    display: none;
+  }
+
+	#portfolio > .container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #portfolio > .container > .photo {
+    width: 30%;
+  }
+
+  #portfolio > .container > div:nth-of-type(2) {
+    display: block;
+  }
+  #portfolio > .container > div:nth-of-type(3) {
+    display: block;
+  }
+
+	#contact > .text {
+    display: block;
+    width: 70%;
+    margin: 20px auto;
+  }
+  #contact > .text > p {
+    margin-top: 5px;
+  }
+}
